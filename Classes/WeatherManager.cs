@@ -16,7 +16,7 @@ namespace Kylosov.Classes
         private WeatherService _weatherService;
         private DatabaseManager _database;
 
-        public WeatherManager(string apiKey = "c6bf980d1a8191e15b71f8fc5dae106e", string connectionString = "Server=192.168.0.111;Database=PR8;User=root;Password=;Port=3306;")
+        public WeatherManager(string apiKey = "c6bf980d1a8191e15b71f8fc5dae106e", string connectionString = "Server=192.168.0.111;Database=PR8;User=root;Password=dawda6358;Port=3306;")
         {
             _weatherService = new WeatherService(apiKey);
             _database = new DatabaseManager(connectionString);

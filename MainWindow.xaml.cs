@@ -1,4 +1,5 @@
-﻿using Kylosov.Elements;
+﻿using Kylosov.Classes;
+using Kylosov.Elements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace Kylosov
         public MainWindow()
         {
             InitializeComponent();
+            _weatherManager = new WeatherManager();
         }
 
         private async void FindClick(object sender, RoutedEventArgs e)
@@ -32,10 +34,13 @@ namespace Kylosov
             var city = City.Text;
 
             var forecast = await _weatherManager.Get5DayForecastByCityName(city);
-            foreach (var day in forecast)
-            {
-                Parrent.Children.Add(new WeatherElement(day));
-            }
+            if (forecast != null)
+                foreach (var day in forecast)
+                {
+                    Parrent.Children.Add(new WeatherElement(day));
+                }
+            else
+                MessageBox.Show("Информации об этом городе нет.");
         }
     }
 }
