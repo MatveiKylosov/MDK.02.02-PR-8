@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kylosov.Elements;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,21 @@ namespace Kylosov
     /// </summary>
     public partial class MainWindow : Window
     {
+        private WeatherManager _weatherManager;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private async void FindClick(object sender, RoutedEventArgs e)
+        {
+            var city = City.Text;
+
+            var forecast = await _weatherManager.Get5DayForecastByCityName(city);
+            foreach (var day in forecast)
+            {
+                Parrent.Children.Add(new WeatherElement(day));
+            }
         }
     }
 }
