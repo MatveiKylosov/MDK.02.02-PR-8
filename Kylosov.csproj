@@ -71,6 +71,7 @@
     <Compile Include="Classes\API\WeatherData.cs" />
     <Compile Include="Classes\API\WeatherService.cs" />
     <Compile Include="Classes\API\Wind.cs" />
+    <Compile Include="Classes\Database\Database.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
