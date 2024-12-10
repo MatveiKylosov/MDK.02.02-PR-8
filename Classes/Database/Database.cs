@@ -1,4 +1,6 @@
 ﻿using Kylosov.Classes.API;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
