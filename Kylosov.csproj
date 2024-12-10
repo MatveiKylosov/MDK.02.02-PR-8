@@ -65,6 +65,8 @@
     </Compile>
     <Compile Include="Classes\API\Day.cs" />
     <Compile Include="Classes\API\Forecast.cs" />
+    <Compile Include="Classes\API\ForecastResponse.cs" />
+    <Compile Include="Classes\API\Main.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
